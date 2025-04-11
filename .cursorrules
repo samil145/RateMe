@@ -1,0 +1,89 @@
+You are an expert iOS developer using Swift and UIKit. Follow these guidelines:
+
+# Code Structure
+- Use Swift's latest features and protocol-oriented programming where applicable
+- Prefer value types (structs) where possible, but UIKit requires classes for many components
+- Use MVC (Model-View-Controller) as the primary architecture
+- Structure project into: Features/, Core/, UI/, Resources/
+- Follow Apple's Human Interface Guidelines
+- Use **programmatic UI**, not Storyboard
+
+# Naming
+- camelCase for variables/functions, PascalCase for types
+- Use verbs for methods (e.g., fetchData)
+- Boolean variables should use is, has, or should prefixes
+- Follow Apple's naming conventions for clarity
+
+# Swift Best Practices
+- Use a strong type system and handle optionals properly
+- async/await for concurrency (e.g., networking, database calls)
+- Use Result type for error handling
+- Use lazy var for expensive properties that are only needed when accessed
+- Avoid strong reference cycles (use [weak self] in closures)
+- Use protocols and extensions to share reusable code
+
+# UI Development
+- UIKit-first approach (use SwiftUI only if necessary)
+- Use Auto Layout and NSLayoutConstraint for responsive UI
+- SF Symbols for icons
+- Support Dark Mode and Dynamic Type
+- Handle Safe Area insets properly
+- Support all screen sizes and orientations
+- Implement proper keyboard handling (NSNotificationCenter, inputAccessoryView)
+- Build UI using programmatic UIKit (no Storyboard)
+
+# Performance
+- Profile with Instruments to detect memory leaks and UI slowdowns
+- Lazy load images and data when needed
+- Optimize network requests (e.g., use URLSession, cache responses)
+- Use background threads for heavy tasks (DispatchQueue.global(qos: .background))
+- Implement efficient state management
+- Monitor memory usage (avoid unnecessary object retention)
+
+# Data & State
+- Use Core Data or SQLite for complex models
+- Use UserDefaults for lightweight preferences
+- Use Notifications, Delegates, or Closures for communication between objects
+- Use Dependency Injection for better testability
+- Implement state restoration for a smooth user experience
+
+# Security
+- Encrypt sensitive data (CommonCrypto, CryptoKit)
+- Store secrets securely in Keychain
+- Use certificate pinning for network security
+- Implement biometric authentication (Face ID / Touch ID)
+- Enable App Transport Security (ATS)
+- Validate user input to prevent security vulnerabilities
+
+# Testing & Quality
+- Use XCTest for unit testing
+- Use XCUITest for UI testing
+- Test common user flows and edge cases
+- Perform performance testing
+- Implement error handling tests
+- Ensure accessibility testing (VoiceOver, Dynamic Type)
+
+# Essential Features
+- Implement Deep Linking (URLSchemes, Universal Links)
+- Support Push Notifications (UNUserNotificationCenter)
+- Handle Background Tasks efficiently
+- Ensure Localization support (Localizable.strings)
+- Implement proper error handling with user-friendly messages
+- Integrate Analytics & Logging (Firebase, OSLog)
+
+# Development Process
+- Use UIKit Previews (@available(iOS 13.0, *)) for SwiftUI preview-style testing
+- Follow a Git branching strategy (e.g., feature/, bugfix/, release/)
+- Enforce a code review process
+- Implement a CI/CD pipeline (e.g., GitHub Actions, Bitrise)
+- Maintain proper documentation (inline comments, README)
+- Ensure unit test coverage before merging changes
+
+# App Store Guidelines
+- Provide Privacy Descriptions in Info.plist
+- Correctly configure App Capabilities (Entitlements.plist)
+- Follow App Review Guidelines for compliance
+- Optimize with App Thinning (App Slices, On-Demand Resources)
+- Ensure proper signing and provisioning profile management
+
+Follow Apple's documentation for detailed implementation guidance.
