@@ -231,13 +231,11 @@ class ProfileViewController: BaseViewController {
     
     // MARK: - Data Loading
     private func loadData() {
-        // Configure profile data
         nameLabel.text = profile.name
         professionLabel.text = profile.profession
         bioLabel.text = profile.bio
         ratingView.setRating(profile.rating)
         
-        // Load profile image
         if let url = URL(string: profile.profileImageURL ?? "") {
             URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
                 guard let data = data, let image = UIImage(data: data) else { return }
@@ -247,7 +245,6 @@ class ProfileViewController: BaseViewController {
             }.resume()
         }
         
-        // Load ratings
         ratings = Rating.mockRatings.filter { $0.toUserId == profile.id }
     }
     
@@ -273,7 +270,6 @@ class ProfileViewController: BaseViewController {
     }
     
     @objc private func contactButtonTapped() {
-        // In a real app, this would open a contact form or messaging interface
         showSuccess("Contact request sent!")
     }
     

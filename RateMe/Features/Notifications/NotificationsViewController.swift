@@ -40,7 +40,6 @@ class NotificationsViewController: BaseViewController {
     
     // MARK: - Data Loading
     private func loadData() {
-        // In a real app, this would be an API call
         notifications = AppNotification.mockNotifications
         tableView.reloadData()
     }
@@ -67,29 +66,24 @@ extension NotificationsViewController: UITableViewDataSource, UITableViewDelegat
         tableView.deselectRow(at: indexPath, animated: true)
         let notification = notifications[indexPath.row]
         
-        // Handle notification tap based on type
         switch notification.type {
         case .newRating, .newComment, .followerActivity:
-            // Navigate to profile
             if let profile = Profile.mockProfiles.first(where: { $0.name == notification.message.components(separatedBy: " ")[0] }) {
                 let profileVC = ProfileViewController(profile: profile)
                 navigationController?.pushViewController(profileVC, animated: true)
             }
             
         case .leaderboardRank:
-            // Navigate to analytics
             let analyticsVC = AnalyticsViewController()
             navigationController?.pushViewController(analyticsVC, animated: true)
             
         case .newFollower:
-            // Navigate to profile
             if let profile = Profile.mockProfiles.first(where: { $0.name == notification.message.components(separatedBy: " ")[0] }) {
                 let profileVC = ProfileViewController(profile: profile)
                 navigationController?.pushViewController(profileVC, animated: true)
             }
             
         case .profileUpdate, .milestone:
-            // These are informational notifications, no navigation needed
             break
         }
     }
@@ -178,7 +172,6 @@ class NotificationCell: UITableViewCell {
     func configure(with notification: AppNotification) {
         messageLabel.text = notification.message
         
-        // Set icon based on notification type
         let iconName: String
         switch notification.type {
         case .newRating:
@@ -198,12 +191,10 @@ class NotificationCell: UITableViewCell {
         }
         iconImageView.image = UIImage(systemName: iconName)
         
-        // Format timestamp
         let formatter = RelativeDateTimeFormatter()
         formatter.unitsStyle = .abbreviated
         timestampLabel.text = formatter.localizedString(for: notification.timestamp, relativeTo: Date())
         
-        // Set background color based on read status
         containerView.backgroundColor = notification.isRead ? .systemBackground : .systemGray6
     }
 } 

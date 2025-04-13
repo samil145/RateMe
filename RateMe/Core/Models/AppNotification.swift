@@ -53,43 +53,43 @@ extension AppNotification {
             id: "1",
             type: .newRating,
             message: "John Doe rated you 5 stars",
-            timestamp: Date().addingTimeInterval(-3600) // 1 hour ago
+            timestamp: Date().addingTimeInterval(-3600) // 1 saat
         ),
         AppNotification(
             id: "2",
             type: .newComment,
             message: "Jane Smith commented on your profile",
-            timestamp: Date().addingTimeInterval(-7200) // 2 hours ago
+            timestamp: Date().addingTimeInterval(-7200) // 2 saat
         ),
         AppNotification(
             id: "3",
             type: .newFollower,
             message: "Mike Johnson started following you",
-            timestamp: Date().addingTimeInterval(-86400) // 1 day ago
+            timestamp: Date().addingTimeInterval(-86400) // 1 gun
         ),
         AppNotification(
             id: "4",
             type: .profileUpdate,
             message: "Your profile was featured in the weekly spotlight",
-            timestamp: Date().addingTimeInterval(-172800) // 2 days ago
+            timestamp: Date().addingTimeInterval(-172800) // 2 gun
         ),
         AppNotification(
             id: "5",
             type: .milestone,
             message: "Congratulations! You've reached 100 followers",
-            timestamp: Date().addingTimeInterval(-259200) // 3 days ago
+            timestamp: Date().addingTimeInterval(-259200) // 3 gun
         ),
         AppNotification(
             id: "6",
             type: .leaderboardRank,
             message: "You're now #1 in the Design category",
-            timestamp: Date().addingTimeInterval(-345600) // 4 days ago
+            timestamp: Date().addingTimeInterval(-345600) // 4 gun
         ),
         AppNotification(
             id: "7",
             type: .followerActivity,
             message: "Sarah Wilson shared your profile",
-            timestamp: Date().addingTimeInterval(-432000) // 5 days ago
+            timestamp: Date().addingTimeInterval(-432000) // 5 gun
         )
     ]
 } 

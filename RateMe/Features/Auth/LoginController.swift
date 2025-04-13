@@ -80,11 +80,9 @@ class LoginController: UIViewController {
     {
         self.view.addSubview(headerView)
         
-        // Text Fields
         self.view.addSubview(emailField)
         self.view.addSubview(passwordField)
         
-        // Buttons
         self.view.addSubview(signInButton)
         self.view.addSubview(newUserButton)
         self.view.addSubview(forgotPasswordButton)
@@ -94,11 +92,9 @@ class LoginController: UIViewController {
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Text Fields
         emailField.translatesAutoresizingMaskIntoConstraints = false
         passwordField.translatesAutoresizingMaskIntoConstraints = false
         
-        // Buttons
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         newUserButton.translatesAutoresizingMaskIntoConstraints = false
         forgotPasswordButton.translatesAutoresizingMaskIntoConstraints = false
@@ -146,7 +142,6 @@ class LoginController: UIViewController {
     
     
     
-    // Selectors
     @objc private func didTapSignIn()
     {
         let loginUserRequest = LoginUserRequest(email: emailField.text ?? "",

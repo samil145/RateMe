@@ -80,23 +80,19 @@ class RegisterController: UIViewController {
     {
         self.view.addSubview(headerView)
         
-        // Text Fields
         self.view.addSubview(usernameField)
         self.view.addSubview(emailField)
         self.view.addSubview(passwordField)
         
-        // Buttons
         self.view.addSubview(signUpButton)
         self.view.addSubview(signInButton)
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
-        // Text Fields
         usernameField.translatesAutoresizingMaskIntoConstraints = false
         emailField.translatesAutoresizingMaskIntoConstraints = false
         passwordField.translatesAutoresizingMaskIntoConstraints = false
         
-        // Buttons
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         

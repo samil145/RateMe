@@ -63,23 +63,19 @@ class ProfileCardView: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            // Profile Image View - Takes most of the width at the top
             profileImageView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
             profileImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             profileImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            profileImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9), // 80% of width for a square-ish image
+            profileImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 0.9),
             
-            // Name Label - Below the image
             nameLabel.topAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: 16),
             nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             
-            // Profession Label - Below name
             professionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 4),
             professionLabel.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             professionLabel.trailingAnchor.constraint(equalTo: nameLabel.trailingAnchor),
             
-            // Rating View - Below profession
             ratingView.topAnchor.constraint(equalTo: professionLabel.bottomAnchor, constant: 8),
             ratingView.leadingAnchor.constraint(equalTo: nameLabel.leadingAnchor),
             ratingView.trailingAnchor.constraint(lessThanOrEqualTo: nameLabel.trailingAnchor),

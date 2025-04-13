@@ -79,7 +79,7 @@ extension Profile {
             totalRatings: 24,
             profileImageURL: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsJTIwd29tYW58ZW58MHx8MHx8fDA%3D",
             location: "San Francisco, CA",
-            joinedDate: Date().addingTimeInterval(-86400 * 365), // 1 year ago
+            joinedDate: Date().addingTimeInterval(-86400 * 365), // 1 il
             socialLinks: SocialLinks(
                 linkedin: "https://linkedin.com/in/alicejohnson",
                 instagram: "https://instagram.com/alice_design",
@@ -96,7 +96,7 @@ extension Profile {
             totalRatings: 32,
             profileImageURL: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmVzc2lvbmFsJTIwbWFufGVufDB8fDB8fHww",
             location: "New York, NY",
-            joinedDate: Date().addingTimeInterval(-86400 * 180), // 6 months ago
+            joinedDate: Date().addingTimeInterval(-86400 * 180), // 6 ay
             socialLinks: SocialLinks(
                 linkedin: "https://linkedin.com/in/michaellee",
                 instagram: nil,

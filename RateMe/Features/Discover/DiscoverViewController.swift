@@ -51,7 +51,6 @@ class DiscoverViewController: BaseViewController {
     }
     
     private func loadProfiles() {
-        // In a real app, this would be an API call
         profiles = Profile.mockProfiles
         setupCardContainer()
         showNextCard()
@@ -59,7 +58,6 @@ class DiscoverViewController: BaseViewController {
     
     private func showNextCard() {
         guard currentIndex < profiles.count else {
-            // No more profiles to show
             let label = UILabel()
             label.text = "No more profiles to show"
             label.textAlignment = .center
@@ -77,7 +75,6 @@ class DiscoverViewController: BaseViewController {
         card.configure(with: profile)
         card.translatesAutoresizingMaskIntoConstraints = false
         
-        // Remove previous card
         currentCard?.removeFromSuperview()
         currentCard = card
         
@@ -89,7 +86,6 @@ class DiscoverViewController: BaseViewController {
             card.bottomAnchor.constraint(equalTo: cardContainer.bottomAnchor)
         ])
         
-        // Add pan gesture
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePan(_:)))
         card.addGestureRecognizer(panGesture)
         card.isUserInteractionEnabled = true
@@ -137,20 +133,17 @@ class DiscoverViewController: BaseViewController {
 extension DiscoverViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text, !searchText.isEmpty else {
-            // Reset to original profiles
             currentIndex = 0
             showNextCard()
             return
         }
         
-        // Filter profiles based on search text
         let filteredProfiles = profiles.filter { profile in
             profile.name.localizedCaseInsensitiveContains(searchText) ||
             profile.profession.localizedCaseInsensitiveContains(searchText) ||
             profile.bio.localizedCaseInsensitiveContains(searchText)
         }
         
-        // Update current profiles and reset index
         profiles = filteredProfiles
         currentIndex = 0
         showNextCard()

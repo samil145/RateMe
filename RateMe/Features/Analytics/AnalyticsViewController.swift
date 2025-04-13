@@ -288,10 +288,8 @@ class LeaderboardCell: UICollectionViewCell {
     func configure(with leaderboard: Leaderboard) {
         categoryLabel.text = leaderboard.category
         
-        // Clear existing user labels
         usersStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
-        // Add user labels
         leaderboard.topUsers.enumerated().forEach { index, user in
             let label = UILabel()
             label.font = .systemFont(ofSize: 16)
@@ -457,10 +455,8 @@ class LeaderboardCard: UIView {
         titleLabel.text = leaderboard.title
         descriptionLabel.text = leaderboard.description
         
-        // Clear existing user labels
         usersStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         
-        // Add user labels
         leaderboard.topUsers.enumerated().forEach { index, user in
             let label = UILabel()
             label.font = .systemFont(ofSize: 16)

@@ -41,10 +41,8 @@ class ForgotPasswordController: UIViewController {
     {
         self.view.addSubview(headerView)
         
-        // Text Fields
         self.view.addSubview(emailField)
         
-        // Buttons
         self.view.addSubview(resetPasswordButton)
         
         headerView.translatesAutoresizingMaskIntoConstraints = false
