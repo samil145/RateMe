@@ -13,13 +13,13 @@
 - Login
 
 <p align="center">
-<img src= "https://github.com/samil145/RateMe/blob/main/Videos/Login.gif?raw=true" height="600" width="300" >
+<img src= "https://github.com/samil145/RateMe/blob/main/Videos/login_.gif?raw=true" height="600" width="300" >
 </p>
 
 - App Flow
 
 <p align="center">
-<img src= "https://github.com/samil145/RateMe/blob/main/Videos/appflow.gif?raw=true" height="600" width="300" >
+<img src= "https://github.com/samil145/RateMe/blob/main/Videos/appflow.gif" height="600" width="300" >
 </p>
 
 ## Steps to install and run app
